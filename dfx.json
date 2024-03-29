@@ -1,0 +1,48 @@
+{
+  "canisters": {
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    },
+    "rune_launchpad_backend": {
+      "candid": "src/rune_launchpad_backend/rune_launchpad_backend.did",
+      "declarations": {
+        "node_compatibility": true
+      },
+      "package": "rune_launchpad_backend",
+      "type": "rust"
+    },
+    "rune_launchpad_frontend": {
+      "dependencies": [
+        "rune_launchpad_backend"
+      ],
+      "source": [
+        "src/rune_launchpad_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "rune_launchpad_frontend"
+    }
+  },
+  "defaults": {
+    "bitcoin": {
+      "enabled": true,
+      "log_level": "info",
+      "nodes": [
+        "127.0.0.1:18444"
+      ]
+    },
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
