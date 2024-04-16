@@ -12,3 +12,10 @@ crate-type = ["cdylib"]
 candid = "0.10"
 ic-cdk = "0.13"
 ic-cdk-timers = "0.7" # Feel free to remove this dependency if you don't need timers
+rune = { git = "https://github.com/ordinals-wallet/rune.git"}
+hex = "0.4.3"
+bitcoin = "0.30.1"
+ripemd = "0.1.1"
+serde = "1.0.132"
+sha2 = "0.10.2"
+bs58 = "0.5.0"
